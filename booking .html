@@ -1,25 +1,46 @@
-<?php
-$servername = "localhost";
-$username = "root"; 
-$password = "rahul@16";   
-$dbname = "airlines_db"; 
-$conn = new mysqli($servername, $username, $password, $dbname);
+<html>
+<head> <link rel="stylesheet" href="styles.css">
+    <title>BOOKING</title>
+</head>
+<body bgcolor="WHITE">
+<center><h1>
+BOOKING FLIGHT</h1></center>
+<br><br><br><br><br>
+<table align="center">
+<tr>
+<td>FLIGHTS AVAILABLE</td>
+<td>
+<select name="My_menu" value="My_menu">
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+<option value="select">select the flight
+<option value="DUBAI TO INDIA">DUBAI TO INDIA
+<option value="UK TO INDIA">UK TO INDIA
+<option value="USA TO INDIA">USA TO INDIA
+<option value="JAPAN TO INDIA">JAPAN TO INDIA
+<option value="INDIA TO DUBAI">INDIA TO DUBAI
+<option value="INDIA TO UK">INDIA TO UK
+<option value="INDIA TO USA">INDIA TO USA
+<option value="INDIA TO JAPAN">INDIA TO USA
+<option value="INDIA TO LONDON">INDIA TO LONDON
 
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    echo "Login successful! <a href='flights.html'>View Flights</a>";
-} else {
-    echo "Invalid username or password. <a href='login.html'>Try again</a>";
-}
-
-$conn->close();
-?>
+</select>
+</td></tr>
+<tr>
+<td>
+NO OF TICKETS</td>
+<td>
+<input type="text" id="q">
+</td></tr>
+<tr>
+<td></td>
+<td>
+<form method=post action="payment.html">
+<input type="submit" value="CONFIRM" class="btn"/>
+</form>
+</td></tr>
+</table>
+<center>
+<pre>Cost of one TICKET is"500" + TAXES "100"</pre>
+</center>
+<body>
+</html>
