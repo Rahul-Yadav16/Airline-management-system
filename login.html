@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration and User Login</title>
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            
+            if (username === "") {
+                alert("Username is required.");
+                return false;
+            }
+            if (password === "") {
+                alert("Password is required.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body bgcolor="WHITE">
+    <center>
+        <strong><h1>INDIAN AIRLINES</h1></strong>
+    </center>
+    <table align="center">
+        <tr>
+            <td><h4>Enter Username</h4></td>
+            <td><input type="text" id="username"></td>
+        </tr>
+        <tr>
+            <td><h4>Enter Password</h4></td>
+            <td><input type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td>
+                <form method="post" action="flight.html" onsubmit="return validateForm()">
+                    <input type="submit" value="Submit" class="btn">
+                </form>
+            </td>
+            <td>
+                <form method="post" action="register.html">
+                    <input type="submit" value="Register" class="btn">
+                    &nbsp;&nbsp;
+                    <input type="reset" value="Reset" class="btn">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
